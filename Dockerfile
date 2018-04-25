@@ -1,10 +1,8 @@
 FROM continuumio/anaconda
 
-RUN pip install mne
+RUN pip install --upgrade mne
 
 COPY run.py /run.py
 
-COPY version /version
-
-ENTRYPOINT ["/run.py"]
+ENTRYPOINT ["python", "/run.py"]
 
