@@ -44,3 +44,4 @@ epochs = mne.Epochs(raw, events, event_id=None, tmin=-0.1, tmax=1,
 if not op.exists(args.outputdir):
     os.mkdir(args.outputdir)
 epochs.average().save(op.join(args.outputdir, 'evoked.fif'))
+
